@@ -10,7 +10,6 @@ public class EmployeePayrollData {
         this.employeeName = employeeName;
         this.employeeSalary = employeeSalary;
     }
-
     /**
      * This method is Collecting the data From Employee
      */
