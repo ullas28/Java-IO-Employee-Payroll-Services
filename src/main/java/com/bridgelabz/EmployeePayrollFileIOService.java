@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import java.util.*;
 
 public class EmployeePayrollFileIOService {
-    public static String PAYROLL_FILE_NAME = "payroll-file.txt";
+    public static String PAYROLL_FILE_NAME = "C:\\Users\\ULLASKUMAR K\\ullas.txt";
 
     /*
      * Create a method WriteData ListOf EmployeePayrollDAta
@@ -69,13 +69,5 @@ public class EmployeePayrollFileIOService {
         return employeePayrollList;
     }
 
-    public static void main(String[] args) {
-        List<EmployeePayrollData> employeePayrollList = new ArrayList<>();
-        EmployeePayrollFileIOService emp = new EmployeePayrollFileIOService();
-        emp.writeData(employeePayrollList);
-        emp.readData();
-        emp.printData();
-        emp.countEntries();
-    }
 }
 
