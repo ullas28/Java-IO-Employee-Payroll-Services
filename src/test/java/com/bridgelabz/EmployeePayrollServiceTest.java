@@ -18,5 +18,6 @@ class EmployeePayrollServiceTest {
         employeePayrollService=new EmployeePayrollService();
         employeePayrollService.writeEmployeePayrollData();
         employeePayrollService.printData(EmployeePayrollService.IOService.FILE_IO);
+        employeePayrollService.countEntries(EmployeePayrollService.IOService.FILE_IO);
         }
 }

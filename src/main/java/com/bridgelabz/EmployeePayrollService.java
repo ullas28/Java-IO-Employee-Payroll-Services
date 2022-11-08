@@ -21,13 +21,6 @@ public class EmployeePayrollService {
         employeePayrollList = new ArrayList<>();
     }
 
-    /**
-     * public EmployeePayrollService(List<EmployeePayrollData> employeePayrollList)
-     * { employeePayrollList=new ArrayList<>();
-     *
-     * }
-     */
-
     public static void main(String[] args) {
         EmployeePayrollService employeePayrollService = new EmployeePayrollService();
         Scanner consoleInputReader = new Scanner(System.in);
@@ -67,6 +60,7 @@ public class EmployeePayrollService {
         }
     }
 
+    // method to create file if file doesn't exist
     private void checkFile() {
         File file = new File(FILE_PATH);
         try {
@@ -80,12 +74,15 @@ public class EmployeePayrollService {
             System.err.println("Problem encountered while creating a file");
         }
     }
+
+    // method to print content of file
     public void printData(IOService ioService) {
-        if (ioService.equals(FILE_IO))
+        if (ioService.equals(IOService.FILE_IO))
             new EmployeePayrollFileIOService().printData();
 
     }
 
+    // method to count entries
     public long countEntries(IOService ioService) {
         long entries = 0;
         try {
