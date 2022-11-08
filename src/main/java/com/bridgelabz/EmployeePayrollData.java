@@ -16,7 +16,7 @@ public class EmployeePayrollData {
 
     @Override
     public String toString() {
-        return "EmployeePayrollData [employeeId=" + employeeId + ", employeeName=" + employeeName + ", employeeSalary="
+        return "EmployeePayrollData [\nemployeeId=" + employeeId + "\nemployeeName=" + employeeName + "\nemployeeSalary="
                 + employeeSalary + "]";
     }
 

@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import java.util.*;
 
 public class EmployeePayrollFileIOService {
-    public static String PAYROLL_FILE_NAME = "C:\\Users\\ULLASKUMAR K\\ullas.txt";
+    public static String PAYROLL_FILE_NAME = "payroll-file.txt";
 
     /*
      * Create a method WriteData ListOf EmployeePayrollDAta

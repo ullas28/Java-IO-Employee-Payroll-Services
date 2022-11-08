@@ -1,6 +1,8 @@
 package com.bridgelabz;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -28,11 +30,12 @@ public class EmployeePayrollService {
         for (int i = 0; i<2; i++) {
             employeePayrollService.readEmployeePayrollData(consoleInputReader);
             employeePayrollService.writeEmployeePayrollData();
-            employeePayrollService.printData(FILE_IO);
+
         }
 
         System.out.println(employeePayrollService.countEntries(CONSOLE_IO));
-
+        System.out.println("Reading from a File\n\n\n\n");
+        employeePayrollService.fileReader();
     }
 
     private void readEmployeePayrollData(Scanner consoleInputReader) {
@@ -91,6 +94,19 @@ public class EmployeePayrollService {
             e.printStackTrace();
         }
         return entries;
+    }
+
+    public void fileReader(){
+        try {
+            BufferedReader b = new BufferedReader(new FileReader("C:\\Users\\ULLASKUMAR K\\ullas.txt"));
+            String s;
+            while ((s = b.readLine()) != null){
+                System.out.println(s);
+            }
+        }
+        catch (Exception e){
+            return;
+        }
     }
 
 }
